@@ -1,8 +1,10 @@
 package units;
 
+import addActions.Coordinates;
+
 public class Inhabitant extends BaseHero {
     public Inhabitant(String name) {
-        super(200, name, 9, 3, 20, new int[]{10, 30}, "Крестьянин");
+        super("Житель", name, 1, 3, new Coordinates(0, 3) ,12,122,23, new int[]{20, 40});
     }
 
     public void step() {

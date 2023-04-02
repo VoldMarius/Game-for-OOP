@@ -1,11 +1,15 @@
 package units;
 
-public class Sniper extends BaseHero {
-    int arrows = 10;
-    int accuracy = 70;
+import addActions.Coordinates;
+import addActions.Coordinates.*;
 
+public class Sniper extends Shooter {
     public Sniper(String name) {
-        super(100, name, 1, 6, 30, new int[]{50, 100}, "Снайпер ");
+
+        super("Снайпер",name,  0, 3, new Coordinates(0,3), 100, 200, 12,
+                new int[]{20, 40});
+        this.arrows = 10;
+        this.accuracy = 75;
     }
 
     public void step() {

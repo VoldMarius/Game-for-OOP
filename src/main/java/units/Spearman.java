@@ -1,8 +1,11 @@
 package units;
 
-public class Spearman extends BaseHero {
+import addActions.Coordinates;
+
+public class Spearman extends Shooter {
     public Spearman(String name) {
-        super(100, name, 1, 5, 80, new int[]{20, 50}, "Копейщик");
+
+        super("Копейщик", name, 1, 3, new Coordinates(0, 7) ,12,122,23, new int[]{20, 40});
     }
 
     public void step() {

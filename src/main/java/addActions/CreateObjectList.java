@@ -13,7 +13,7 @@ import units.Wizard;
 
 public class CreateObjectList {
 
-    public static void createList(int num, int numClass) {
+    public static ArrayList createList(int num, int numClass) {
         ArrayList<BaseHero> heroList = new ArrayList();
         Random random = new Random();
 
@@ -37,13 +37,13 @@ public class CreateObjectList {
             }
         }
 
-        for(index = 1; index < num + 1; ++index) {
-            System.out.println("" + index + ".  " + ((BaseHero)heroList.get(index - 1)).class_name + " по имени:  " + getName());
-        }
 
+
+        return heroList;
     }
 
-    private static String getName() {
+    public static String getName() {
+
         return Names.values()[(new Random()).nextInt(Names.values().length)].toString();
     }
 }

@@ -3,13 +3,10 @@ import java.util.Iterator;
 import java.util.List;
 
 import addActions.CreateObjectList;
-import units.Crossbowman;
-import units.Inhabitant;
-import units.Priest;
-import units.Sniper;
-import units.Spearman;
-import units.Thief;
-import units.Wizard;
+import addActions.PrintArmy;
+import units.*;
+
+import static addActions.CreateObjectList.*;
 
 public class Main {
     public Main() {
@@ -31,20 +28,23 @@ public class Main {
         unit.add(inh);
         unit.add(sp);
         unit.add(tf);
-        Iterator var9 = unit.iterator();
+        Iterator Iterator = unit.iterator();
 
-        while(var9.hasNext()) {
-            Object n = var9.next();
+        while(Iterator.hasNext()) {
+            Object n = Iterator.next();
             System.out.print(String.valueOf(n) + "\n");
-
         }
+
         System.out.println("=====================");
         System.out.println("Первый набор юнитов");
+        ArrayList<BaseHero> team1 = CreateObjectList.createList(10,7);
+        PrintArmy.createList(team1,10);
 
-        CreateObjectList.createList(10,7);
         System.out.println("=====================");
         System.out.println("Второй набор юнитов");
+        ArrayList<BaseHero> team2 = CreateObjectList.createList(10,7);
+        PrintArmy.createList(team2,10);
 
-        CreateObjectList.createList(10,7);
+        System.out.println(team1.get(10).findNearest(team2));
     }
 }

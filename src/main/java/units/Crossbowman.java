@@ -1,11 +1,14 @@
 package units;
 
-public class Crossbowman extends BaseHero {
-    int bolt = 30;
-    int accuracy = 50;
+import addActions.Coordinates;
 
-    public Crossbowman(String name) {
-        super(100, name, 1, 6, 50, new int[]{30, 60}, "Арбалетчик ");
+public class Crossbowman extends Shooter {
+    int bolt;
+    public Crossbowman(String name){
+        super("Арбалетчик", name, 1, 3, new Coordinates(0, 4) ,12,122,23, new int[]{20, 40});
+        this.bolt = 10;
+        this.accuracy = 75;
+
     }
 
     public void step() {

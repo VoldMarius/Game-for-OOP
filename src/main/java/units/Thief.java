@@ -1,8 +1,11 @@
 package units;
 
+import addActions.Coordinates;
+
 public class Thief extends BaseHero {
     public Thief(String name) {
-        super(100, name, 1, 6, 50, new int[]{25, 40}, "Вор");
+        super("Вор", name, 1, 3, new Coordinates(0, 5) ,12,
+                122,23, new int[]{20, 40});
     }
 
     public void step() {
