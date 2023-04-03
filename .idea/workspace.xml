@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="Начал реализацию метода step для Shooter.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/addActions/CreateObjectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/addActions/CreateObjectList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/GameInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/BaseHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Crossbowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Inhabitant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Inhabitant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Priest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Priest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Sniper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Thief.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Wizard.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="Начал реализацию метода step для Shooter." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +20,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -93,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680233445902</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Начал реализацию метода step для Shooter.">
+      <created>1680516028969</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680516028969</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
