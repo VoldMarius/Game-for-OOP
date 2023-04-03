@@ -6,20 +6,18 @@ import addActions.CreateObjectList;
 import addActions.PrintArmy;
 import units.*;
 
-import static addActions.CreateObjectList.*;
-
 public class Main {
     public Main() {
     }
 
     public static <objekt> void main(String[] args) {
-        Sniper sn = new Sniper("Bob");
-        Crossbowman cr = new Crossbowman("Greg");
-        Wizard wz = new Wizard("David");
-        Priest pr = new Priest("Iov");
-        Inhabitant inh = new Inhabitant("Ivan");
-        Spearman sp = new Spearman("Gollem");
-        Thief tf = new Thief("Igor");
+        Sniper sn = new Sniper("Bob", 1, 5);
+        Crossbowman cr = new Crossbowman("Greg", 5,4);
+        Wizard wz = new Wizard("David", 3, 2);
+        Priest pr = new Priest("Iov", 1, 6);
+        Inhabitant inh = new Inhabitant("Ivan", 1, 2);
+        Spearman sp = new Spearman("Gollem", 1, 7);
+        Thief tf = new Thief("Igor", 1, 4);
         List unit = new ArrayList();
         unit.add(sn);
         unit.add(cr);
@@ -36,15 +34,18 @@ public class Main {
         }
 
         System.out.println("=====================");
-        System.out.println("Первый набор юнитов");
-        ArrayList<BaseHero> team1 = CreateObjectList.createList(10,7);
-        PrintArmy.createList(team1,10);
+        System.out.println("Тьма ");
+        ArrayList<BaseHero> team1 = CreateObjectList.createDarkList(4,4,1);
+        PrintArmy.createList(team1,4);
 
         System.out.println("=====================");
-        System.out.println("Второй набор юнитов");
-        ArrayList<BaseHero> team2 = CreateObjectList.createList(10,7);
-        PrintArmy.createList(team2,10);
+        System.out.println("Свет ");
+        ArrayList<BaseHero> team2 = CreateObjectList.createLightList(4,4,9);
+        PrintArmy.createList(team2,4);
+        System.out.println("=====================");
+        team2.get(1).step(team1,team2);
+        team2.get(0).step(team1,team2);
+        team1.get(0).step(team2,team1);
 
-        System.out.println(team1.get(10).findNearest(team2));
     }
 }

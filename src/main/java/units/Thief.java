@@ -2,16 +2,23 @@ package units;
 
 import addActions.Coordinates;
 
+import java.util.ArrayList;
+
 public class Thief extends BaseHero {
-    public Thief(String name) {
-        super("Вор", name, 1, 3, new Coordinates(0, 5) ,12,
+    public Thief(String name, int x, int y) {
+        super("Вор", name, x, y, new Coordinates(x, y) ,12,
                 122,23, new int[]{20, 40});
     }
 
-    public void step() {
+
+    @Override
+    public void step(ArrayList<BaseHero> team, ArrayList<BaseHero> team2) {
+
     }
 
     public String getInfo() {
         return "Вор";
     }
+
+
 }

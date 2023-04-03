@@ -13,37 +13,44 @@ import units.Wizard;
 
 public class CreateObjectList {
 
-    public static ArrayList createList(int num, int numClass) {
-        ArrayList<BaseHero> heroList = new ArrayList();
-        Random random = new Random();
+    public static ArrayList createLightList(int num, int numClass, int x) {
+        ArrayList<BaseHero> lightList = new ArrayList();
 
-        int index;
-        for(index = 0; index < num; ++index) {
-            switch (random.nextInt(numClass)) {
-                case 0:
-                    heroList.add(new Spearman(getName()));
+        for (int i = 1; i < num; i++) {
+            switch (i) {
                 case 1:
-                    heroList.add(new Sniper(getName()));
+                    lightList.add(new Spearman(getName(), x,1));
                 case 2:
-                    heroList.add(new Crossbowman(getName()));
+                    lightList.add(new Sniper(getName(), x, 2));
                 case 3:
-                    heroList.add(new Inhabitant(getName()));
-                case 4:
-                    heroList.add(new Priest(getName()));
-                case 5:
-                    heroList.add(new Wizard(getName()));
+                    lightList.add(new Priest(getName(), x, 3));
                 default:
-                    heroList.add(new Thief(getName()));
+                    lightList.add(new Inhabitant(getName(), x, 4));
             }
+
         }
-
-
-
-        return heroList;
+        return lightList;
     }
+    public static ArrayList createDarkList(int num, int numClass, int x) {
 
-    public static String getName() {
+            ArrayList<BaseHero> darkList = new ArrayList();
 
-        return Names.values()[(new Random()).nextInt(Names.values().length)].toString();
+            for (int j = 1; j < num; j++) {
+                switch (j) {
+                    case 1:
+                        darkList.add(new Crossbowman(getName(), x, 1));
+                    case 2:
+                        darkList.add(new Wizard(getName(), x, 2));
+                    case 3:
+                        darkList.add(new Thief(getName(), x, 3));
+                    default:
+                        darkList.add(new Inhabitant(getName(), x, 4));
+                }
+            }
+        return darkList;
     }
-}
+        public static String getName () {
+
+            return Names.values()[(new Random()).nextInt(Names.values().length)].toString();
+        }
+    }

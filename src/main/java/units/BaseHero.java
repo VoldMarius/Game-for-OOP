@@ -40,23 +40,24 @@ public abstract class BaseHero implements GameInterface {
     public String getInfo() {
         return null;
     }
-    public ArrayList getTeam() {
 
-        return null;
-    }
-    public String findNearest(ArrayList<BaseHero> team) {
+    public String findNearest(ArrayList<BaseHero> enemyTeam) {
 
         double min = 100;
         String findNearest = null;
-        for (int i = 1; i < team.size(); ++i) {
+        for (int i = 0; i < enemyTeam.size(); ++i) {
 
-            if (this.pos.getDistance(team.get(i).pos) < min) {
-                min = this.pos.getDistance(team.get(i).pos);
-                findNearest = ((BaseHero) team.get(i)).getInfo();
+            if (this.pos.getDistance(enemyTeam.get(i).pos) < min) {
+                min = this.pos.getDistance(enemyTeam.get(i).pos);
+                findNearest = ((BaseHero) enemyTeam.get(i)).getInfo();
 
             }
         }return findNearest;
     }
+
+    public void step(ArrayList<BaseHero> team, ArrayList<BaseHero> team2){
+
+    };
 }
 
 
