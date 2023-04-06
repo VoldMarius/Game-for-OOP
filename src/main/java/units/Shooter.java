@@ -20,19 +20,26 @@ public abstract class Shooter extends BaseHero {
     public void step(ArrayList<BaseHero> lightList, ArrayList<BaseHero> darkList) {
 
         if (this.hp == 0 && arrows == 0) {
-            this.state ="Die";
-        }
-        else {
-                if (!this.state.equals("DIe") && this.arrows != 0) {
-                    int target = this.findNearest(lightList);
-                    double attack = this.damage -(lightList.get(target)).armor*(10 -(this.pos.getDistance(lightList.get(target).pos)));
-                    (lightList.get(target)).getPain(attack);
-                    arrows -=1;
-                    System.out.println(this.name + " " + String.valueOf(this.getInfo())+ " " + " выстрелил в ->  "
-                            + String.valueOf( lightList.get(target).getInfo())+ " "+lightList.get(target).name+
-                            " его здоровье теперь-> "+lightList.get(target).hp+" его статус -> "+lightList.get(target).state);
+            this.state = "Die";
+        } else {
+            if (!this.state.equals("DIe") && this.arrows != 0) {
+                int target = this.findNearest(lightList);
+                double attack = this.damage - (lightList.get(target)).armor * (10 - (this.pos.getDistance(lightList.get(target).pos)));
+                (lightList.get(target)).getPain(attack);
+                --this.arrows;
+                System.out.println(this.name + " " + String.valueOf(this.getInfo()) + " стрел у него  " + this.arrows+ " " + " выстрелил в ->  "
+                        + String.valueOf(lightList.get(target).getInfo()) + " " + lightList.get(target).name +
+                        " его здоровье теперь-> " + lightList.get(target).hp + " его статус -> " + lightList.get(target).state);
+                for (int i = 0; i < darkList.size(); ++i) {
+                    if (darkList.get(i) instanceof Inhabitant && ((BaseHero) darkList.get(i)).state.equals("Stand")) {
 
+                        if (this.arrows<11){
+                            darkList.get(i).state = "Busy ";
+                            System.out.println(darkList.get(i).class_name+ " " +darkList.get(i).name+ " " +darkList.get(i).state);
+                            ++this.arrows;}
+                    }
                 }
-                }
+            }
         }
     }
+}

@@ -2,6 +2,7 @@ import java.util.*;
 
 import addActions.CreateObjectList;
 import addActions.PrintArmy;
+import addActions.TeamSort;
 import units.*;
 
 public class Main {
@@ -41,22 +42,20 @@ public class Main {
         System.out.println("Свет ");
         ArrayList<BaseHero> light = CreateObjectList.createLightList(9, 0);
         PrintArmy.print(light);
-        System.out.println("=====================");
+
         ArrayList<BaseHero> team = new ArrayList();
         team.addAll(dark);
         team.addAll(light);
-        team.sort((Comparator<BaseHero>) (o2, o1) -> o2.getSpeed() == o1.getSpeed()
-                ? (int) (o1.getHp() - o2.getHp()) : o2.getSpeed() - o1.getSpeed());
+        TeamSort.sort(team);
 
         for (BaseHero hero : team) {
-            if(light.contains(hero)) {
+            if (light.contains(hero)) {
                 hero.step(dark, light);
+            } else {
+                hero.step(light, dark);
             }
-            else {hero.step(light, dark);}
-        }
 
-//        team.sort((Comparator<BaseHero>) (o2, o1) -> o2.getSpeed() == o1.getSpeed()
-//                ? (int) (o1.getHp() - o2.getHp()) : o2.getSpeed() - o1.getSpeed());
-//        PrintArmy.print(team);
+        } TeamSort.sort(team);
+        PrintArmy.print(team);
     }
 }
