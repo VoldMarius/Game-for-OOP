@@ -2,26 +2,37 @@ package units;
 import addActions.Coordinates;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public abstract class Shooter extends BaseHero  {
+
+public abstract class Shooter extends BaseHero {
     protected int arrows;
     protected int accuracy;
 
     public Shooter(String class_name, String name, int x, int y, Coordinates pos, int hp,
-                   int max_hp, int armor, int[] damage) {
-        super(class_name, name, x, y, pos, hp, max_hp, armor, damage);
+                   int max_hp, int armor, int damage, int speed, String state) {
+        super(class_name, name, x, y, pos, hp, max_hp, armor, damage, speed, state);
         this.arrows = arrows;
         this.accuracy = accuracy;
     }
+
     @Override
-    public void step(ArrayList<BaseHero> LightList, ArrayList<BaseHero> DarkList) {
+    public void step(ArrayList<BaseHero> lightList, ArrayList<BaseHero> darkList) {
 
         if (this.hp == 0 && arrows == 0) {
-            return;
-        } else {
-            System.out.println("Ближайшая цель для "+this.class_name+" -> " + findNearest(LightList));
+            this.state ="Die";
+        }
+        else {
+                if (!this.state.equals("DIe") && this.arrows != 0) {
+                    int target = this.findNearest(lightList);
+                    double attack = this.damage -(lightList.get(target)).armor*(10 -(this.pos.getDistance(lightList.get(target).pos)));
+                    (lightList.get(target)).getPain(attack);
+                    arrows -=1;
+                    System.out.println(this.name + " " + String.valueOf(this.getInfo())+ " " + " выстрелил в ->  "
+                            + String.valueOf( lightList.get(target).getInfo())+ " "+lightList.get(target).name+
+                            " его здоровье теперь-> "+lightList.get(target).hp+" его статус -> "+lightList.get(target).state);
+
+                }
+                }
         }
     }
-
-
-}

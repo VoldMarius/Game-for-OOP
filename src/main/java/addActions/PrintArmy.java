@@ -7,11 +7,13 @@ import java.util.ArrayList;
 import static addActions.CreateObjectList.getName;
 
 public class PrintArmy {
-    public static void createList(ArrayList team,int length) {
+    public static void print(ArrayList team) {
         int index;
-        for(index = 1; index < length+1; ++index) {
-            System.out.println("" + index + ". " + ((BaseHero)team.get(index - 1)).class_name + " по имени: "
-                    + getName() + ". " +(((BaseHero) team.get(index - 1)).pos).toString());
+        for(index = 1; index < team.size()+1; ++index) {
+            System.out.println("" + index + ". " + ((BaseHero)team.get(index - 1)).class_name
+                    + " по имени: " + ((BaseHero)team.get(index - 1)).name
+                    + ". Здоровье: " +((BaseHero) team.get(index - 1)).getHp());
+
         }
     }
 }

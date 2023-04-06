@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import addActions.CreateObjectList;
 import addActions.PrintArmy;
@@ -12,7 +10,7 @@ public class Main {
 
     public static <objekt> void main(String[] args) {
         Sniper sn = new Sniper("Bob", 1, 5);
-        Crossbowman cr = new Crossbowman("Greg", 5,4);
+        Crossbowman cr = new Crossbowman("Greg", 5, 4);
         Wizard wz = new Wizard("David", 3, 2);
         Priest pr = new Priest("Iov", 1, 6);
         Inhabitant inh = new Inhabitant("Ivan", 1, 2);
@@ -28,24 +26,37 @@ public class Main {
         unit.add(tf);
         Iterator Iterator = unit.iterator();
 
-        while(Iterator.hasNext()) {
-            Object n = Iterator.next();
-            System.out.print(String.valueOf(n) + "\n");
-        }
-
+//        while (Iterator.hasNext()) {
+//            Object n = Iterator.next();
+//            System.out.print(String.valueOf(n) + "\n");
+//        }
+        Scanner user_input = new Scanner(System.in);
+        System.out.print("Press Enter to begin.");
+        user_input.nextLine();
         System.out.println("=====================");
         System.out.println("Тьма ");
-        ArrayList<BaseHero> team1 = CreateObjectList.createDarkList(4,4,1);
-        PrintArmy.createList(team1,4);
-
+        ArrayList<BaseHero> dark = CreateObjectList.createDarkList(1, 0);
+        PrintArmy.print(dark);
         System.out.println("=====================");
         System.out.println("Свет ");
-        ArrayList<BaseHero> team2 = CreateObjectList.createLightList(4,4,9);
-        PrintArmy.createList(team2,4);
+        ArrayList<BaseHero> light = CreateObjectList.createLightList(9, 0);
+        PrintArmy.print(light);
         System.out.println("=====================");
-        team2.get(1).step(team1,team2);
-        team2.get(0).step(team1,team2);
-        team1.get(0).step(team2,team1);
+        ArrayList<BaseHero> team = new ArrayList();
+        team.addAll(dark);
+        team.addAll(light);
+        team.sort((Comparator<BaseHero>) (o2, o1) -> o2.getSpeed() == o1.getSpeed()
+                ? (int) (o1.getHp() - o2.getHp()) : o2.getSpeed() - o1.getSpeed());
 
+        for (BaseHero hero : team) {
+            if(light.contains(hero)) {
+                hero.step(dark, light);
+            }
+            else {hero.step(light, dark);}
+        }
+
+//        team.sort((Comparator<BaseHero>) (o2, o1) -> o2.getSpeed() == o1.getSpeed()
+//                ? (int) (o1.getHp() - o2.getHp()) : o2.getSpeed() - o1.getSpeed());
+//        PrintArmy.print(team);
     }
 }

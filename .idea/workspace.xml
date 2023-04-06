@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="Начал реализацию метода step для Shooter." />
+    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="Начал реализацию метода step для Shooter.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/addActions/CreateObjectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/addActions/CreateObjectList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/addActions/PrintArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/addActions/PrintArmy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/BaseHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Crossbowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Inhabitant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Inhabitant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Priest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Priest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Thief.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Wizard.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680516028969</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Начал реализацию метода step для Shooter.">
+      <created>1680516134458</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680516134458</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Начал реализацию метода step для Shooter.">
+      <created>1680516181060</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680516181061</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

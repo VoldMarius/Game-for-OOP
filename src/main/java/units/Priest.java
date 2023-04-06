@@ -9,7 +9,7 @@ public class Priest extends BaseHero {
     int accuracy = 70;
 
     public Priest(String name, int x, int y) {
-        super("Монах ", name, x, y, new Coordinates(x, y) ,12,122,23, new int[]{20, 40});
+        super("Монах ", name, x, y, new Coordinates(x, y) ,100,100,23, 9,3,"Stand");
     }
 
     public void step() {

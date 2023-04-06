@@ -6,8 +6,7 @@ import java.util.ArrayList;
 
 public class Thief extends BaseHero {
     public Thief(String name, int x, int y) {
-        super("Вор", name, x, y, new Coordinates(x, y) ,12,
-                122,23, new int[]{20, 40});
+        super("Вор", name, x, y, new Coordinates(x, y) ,100, 100,23, 9,2,"Stand");
     }
 
 

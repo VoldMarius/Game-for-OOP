@@ -5,10 +5,10 @@ import addActions.Coordinates;
 import java.util.ArrayList;
 
 public class Crossbowman extends Shooter {
-    int bolt;
+
     public Crossbowman(String name, int x, int y){
-        super("Арбалетчик", name, x, y, new Coordinates(x, y) ,12,122,23, new int[]{20, 40});
-        this.bolt = 10;
+        super("Арбалетчик", name, x, y, new Coordinates(x, y) ,100,100,23, 50,1,"Stand");
+        this.arrows = 10;
         this.accuracy = 75;
 
     }
@@ -20,6 +20,5 @@ public class Crossbowman extends Shooter {
     public String getInfo() {
         return "Арбалетчик";
     }
-
 
 }
