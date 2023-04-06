@@ -42,7 +42,7 @@ public class Main {
         System.out.println("Свет ");
         ArrayList<BaseHero> light = CreateObjectList.createLightList(9, 0);
         PrintArmy.print(light);
-
+        System.out.println("=====================");
         ArrayList<BaseHero> team = new ArrayList();
         team.addAll(dark);
         team.addAll(light);
@@ -55,7 +55,9 @@ public class Main {
                 hero.step(light, dark);
             }
 
-        } TeamSort.sort(team);
+        }
+        System.out.println("=====================");
+        TeamSort.sort(team);
         PrintArmy.print(team);
     }
 }

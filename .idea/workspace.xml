@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="Добавил абстрактное строковое поле Доработл степ лучника.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/addActions/TeamSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="крестьянина поле &quot;состояние&quot; заменить на &quot;busy&quot;">
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Shooter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680782527446</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="крестьянина поле &quot;состояние&quot; заменить на &quot;busy&quot;">
+      <created>1680786867172</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680786867172</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +139,7 @@
     <MESSAGE value="ready to push" />
     <MESSAGE value="Начал реализацию метода step для Shooter." />
     <MESSAGE value="Добавил абстрактное строковое поле Доработл степ лучника." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил абстрактное строковое поле Доработл степ лучника." />
+    <MESSAGE value="крестьянина поле &quot;состояние&quot; заменить на &quot;busy&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="крестьянина поле &quot;состояние&quot; заменить на &quot;busy&quot;" />
   </component>
 </project>

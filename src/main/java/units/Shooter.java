@@ -35,7 +35,7 @@ public abstract class Shooter extends BaseHero {
 
                         if (this.arrows<11){
                             darkList.get(i).state = "Busy ";
-                            System.out.println(darkList.get(i).class_name+ " " +darkList.get(i).name+ " " +darkList.get(i).state);
+                            System.out.println(darkList.get(i).class_name+ " " +darkList.get(i).name+ " статус: " +darkList.get(i).state);
                             ++this.arrows;}
                     }
                 }
