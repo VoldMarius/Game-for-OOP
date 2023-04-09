@@ -11,11 +11,7 @@ public class Coordinates {
                 this.x = x;
                 this.y = y;
         }
-        public int[] getCoordinates(){
 
-
-            return new int[] {x,y};
-            }
 
     public String toString() {
             return "Координаты: "+ this.x +" " +this.y ;

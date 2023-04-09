@@ -1,6 +1,7 @@
 package addActions;
 
 import units.BaseHero;
+import units.Shooter;
 
 import java.util.ArrayList;
 

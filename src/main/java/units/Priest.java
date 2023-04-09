@@ -9,14 +9,14 @@ public class Priest extends BaseHero {
     int accuracy = 70;
 
     public Priest(String name, int x, int y) {
-        super("Монах ", name, x, y, new Coordinates(x, y) ,100,100,23, 9,3,"Stand");
+        super("Пастырь ", name, x, y, new Coordinates(x, y) ,100,100,23, 9,3,"Stand");
     }
 
     public void step() {
     }
 
     public String getInfo() {
-        return "Монах";
+        return "Пастырь";
     }
 
     @Override
