@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Crossbowman extends Shooter {
     public Crossbowman(String name, int x, int y){
-        super("Арбалетчик", name, x, y, new Coordinates(x, y) ,100,100,23, 60,1,"Stand");
+        super("Арбалетчик", name,"\ud83c\udff9", x, y, new Coordinates(x, y) ,100,100,23, 60,1,"Stand");
         this.arrows = 10;
 
     }

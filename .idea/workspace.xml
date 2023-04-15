@@ -4,23 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="крестьянина поле &quot;состояние&quot; заменить на &quot;busy&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnsiColors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/units/Magic.java" afterDir="false" />
+    <list default="true" id="1a473a1b-21ea-40e5-a444-ecada1461498" name="Changes" comment="Реализовал визуализацию по примеру!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/units/Melee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/addActions/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/addActions/Coordinates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/addActions/CreateObjectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/addActions/CreateObjectList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/addActions/PrintArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/addActions/PrintArmy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/BaseHero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Crossbowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Inhabitant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Inhabitant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Magic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Magic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/units/Priest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Priest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Shooter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Sniper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Thief.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/units/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/units/Wizard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680789675462</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Реализовал визуализацию по примеру!">
+      <created>1681063436641</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681063436641</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +177,7 @@
     <MESSAGE value="Начал реализацию метода step для Shooter." />
     <MESSAGE value="Добавил абстрактное строковое поле Доработл степ лучника." />
     <MESSAGE value="крестьянина поле &quot;состояние&quot; заменить на &quot;busy&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="крестьянина поле &quot;состояние&quot; заменить на &quot;busy&quot;" />
+    <MESSAGE value="Реализовал визуализацию по примеру!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовал визуализацию по примеру!" />
   </component>
 </project>

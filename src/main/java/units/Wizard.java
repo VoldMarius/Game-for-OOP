@@ -11,18 +11,13 @@ public class Wizard extends Magic {
 
 
     public Wizard(String name, int x, int y) {
-        super("Маг",name,x,y,new Coordinates(x, y), 100, 100, 12,3,20,35,"Stand");
-
+        super("Маг",name,"\uD83E\uDDD9",x,y,new Coordinates(x, y), 100, 100, 12,3,20,30,"Stand");
     }
-
-
     public String getInfo() {
         return "Маг";
     }
-
     @Override
     public void step(ArrayList<BaseHero> team1, ArrayList<BaseHero> team2) {
         super.step(team1, team2);
     }
-
     }

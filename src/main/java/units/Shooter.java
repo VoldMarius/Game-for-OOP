@@ -7,12 +7,12 @@ import java.util.Iterator;
 
 public abstract class Shooter extends BaseHero {
     protected int arrows;
-    protected int accuracy;
 
 
-    public Shooter(String class_name, String name, int x, int y, Coordinates pos, int hp,
+
+    public Shooter(String class_name, String name, String emoji,int x, int y,Coordinates pos, int hp,
                    int max_hp, int armor, int damage, int speed, String state) {
-        super(class_name, name, x, y, pos, hp, max_hp, armor, damage, speed, state);
+        super(class_name, name,emoji, x, y, pos, hp, max_hp, armor, damage, speed, state);
         this.arrows = arrows;
 
     }
@@ -23,9 +23,9 @@ public abstract class Shooter extends BaseHero {
         if (this.hp == 0 && arrows == 0) {
             this.state = "Die";
         } else {
-                int target = this.findNearest(lightList);
-                double attack = this.damage - (lightList.get(target)).armor * (10 - (this.pos.getDistance(lightList.get(target).pos)));
-                (lightList.get(target)).getPain(attack);
+                BaseHero target = this.findNearest(lightList);
+                double attack = this.damage - (target.armor * (10/(pos.getDistance(target))));
+                target.getPain(attack);
                 --this.arrows;
                 for (int i = 0; i < darkList.size(); ++i) {
                     if (darkList.get(i) instanceof Inhabitant && ((BaseHero) darkList.get(i)).state.equals("Stand")) {

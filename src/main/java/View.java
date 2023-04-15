@@ -7,7 +7,7 @@ public class View {
     private static int step = 1;
     private static final int[] l = {0};
     private static final String top10 = formatDiv("a") + String.join("", Collections.nCopies(10, formatDiv("-b"))) + formatDiv("-c");
-    private static final String midl10 = formatDiv("d") + String.join("", Collections.nCopies(10, formatDiv("~~"))) + formatDiv("-f");
+    private static final String midl10 = formatDiv("d") + String.join("", Collections.nCopies(10, formatDiv(".."))) + formatDiv(".f");
     private static final String bottom10 = formatDiv("g") + String.join("", Collections.nCopies(10, formatDiv("-h"))) + formatDiv("-i");
     private static void tabSetter(int cnt, int max){
         int dif = max - cnt + 2;
@@ -30,18 +30,18 @@ public class View {
         return a.replace("А", "\ud83c\udff9").replace("С", "\uD83D\uDD2B").
                 replace("Ж", "\uD83D\uDC68").replace("В", "\uD83E\uDDD4\uD83C\uDFFE").
                 replace("М", "\uD83E\uDDD9").replace("К", "\uD83D\uDDE1️").
-                replace("П", "✝️");
+                replace("П", "✝️"). replace("h", "\uD83D\uDC97");
     }
     private static String getChar(int x, int y){
         String out = "  ";
         for (BaseHero human: Main.team) {
-            if (human.getCoordinates()[0] == x && human.getCoordinates()[1] == y){
-                if (human.getHp() == 0) {
+            if (human.getCoords()[0]== x && human.getCoords()[1] == y){
+                if (human.getState().equals("Die")) {
                     out =emoji("☠️ ") ;
                     break;
                 }
-                if (human.getHp() <human.getMax_hp() && human.getHp()>human.getHp()/2 ) {
-                    out =  emoji(" \uD83D\uDE21" );
+                if (human.getHp()<human.getMax_hp()/2 ) {
+                    out =  emoji("\uD83D\uDE21 " );
                     break;
                 }
 
@@ -62,9 +62,8 @@ public class View {
         Main.team.forEach((v) -> l[0] = Math.max(l[0], v.toString().length()));
         System.out.print("_".repeat(l[0]*3));
         System.out.println("");
-        System.out.print(top10 + "    ");
+        System.out.print(top10 + "        ");
         System.out.print(AnsiColors.ANSI_GREEN +"Тьма"  + AnsiColors.ANSI_RESET);
-        //for (int i = 0; i < l[0]-9; i++)
         System.out.print(" ".repeat(l[0]-9));
         System.out.println(AnsiColors.ANSI_BLUE +"      \tСвет"  + AnsiColors.ANSI_RESET);
         for (int i = 1; i < 11; i++) {

@@ -41,7 +41,7 @@ public class View1 {
 
         while(var3.hasNext()) {
             BaseHero baseHero = (BaseHero) var3.next();
-            if (baseHero.getCoordinates()[0] == x && baseHero.getCoordinates()[1] == y) {
+            if (baseHero.getCoords()[0] == x && baseHero.getCoords()[1] == y) {
                 if (baseHero.getHp() == 0) {
                     out = "|\ud83e\uddb4";
                 } else {

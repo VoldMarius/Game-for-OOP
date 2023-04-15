@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Sniper extends Shooter {
     public Sniper(String name, int x, int y) {
-        super("Снайпер",name,  x, y, new Coordinates(x, y), 100, 100, 12,60,1,"Stand");
+        super("Снайпер",name,"\uD83D\uDD2B",  x, y, new Coordinates(x, y), 100, 100, 12,60,1,"Stand");
         this.arrows = 10;
 
     }
